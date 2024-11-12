@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+}
+/* Canvas 2D sebagai background */
+#canvas2D {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+/* Canvas 3D di atas kanvas 2D */
+#canvas3D {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+/* Teks utama di atas kanvas */
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    text-align: center;
+    z-index: 2;
+    color: rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5), 0 0 70px rgba(0, 255, 0, 0.5), 0 0 80px rgba(0, 255, 0, 0.5), 0 0 100px rgba(0, 255, 0, 0.5);
+}

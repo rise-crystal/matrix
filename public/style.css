@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.parallax {
+    position: relative;
+    height: 100vh; /* Tinggi penuh viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #282c34; /* Latar belakang gelap */
+    color: white;
+    font-size: 3rem; /* Ukuran font besar untuk judul */
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8); /* Latar belakang transparan */
+}
+
+.matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
+    gap: 10px; /* Jarak antar item */
+    margin-top: 20px;
+}
+
+.matrix-item {
+    background: rgba(0, 150, 136, 0.7); /* Warna latar belakang item */
+    color: white;
+    padding: 20px;
+    border-radius: 10px; /* Sudut melengkung */
+    font-size: 2rem; /* Ukuran font item */
+    text-align: center;
+    transition: transform 0.3s; /* Transisi untuk efek */
+}
+
+/* Efek parallax saat menggulir */
+body {
+    perspective: 1000px; /* Menambahkan perspektif */
+}
+
+.matrix-item {
+    transform: translateZ(0); /* Memungkinkan efek parallax */
+}
+
+body {
+    scroll-behavior: smooth; /* Animasi gulir halus */
+}
